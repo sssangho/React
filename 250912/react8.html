@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>React Minimal</title>
+  <!-- React & ReactDOM CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel (JSX 변환용) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    #container {
+      background-color: #fff;
+      padding: 50px;
+    }
+
+    .letter {
+      padding: 10px;
+      margin: 10px;
+      background-color: #ffde00;
+      color: #333;
+      font-size: 32px;
+      text-align: center;
+      display: inline-block;
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <!-- React 코드 (JSX 사용) -->
+  <script type="text/babel">
+    const Letter = (props) => {
+      const letterStyle = {
+        padding: '10px',
+        margin: '10px',
+        backgroundColor: props.bgcolor,
+        color: '#333',
+        fontSize: '32px',
+        textAlign: 'center',
+        display: 'inline-block',
+        fontFamily: 'monospace'
+      };
+      return (
+        <div style={letterStyle}>
+          {props.children}
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('container'));
+    root.render(
+      <div>
+        <Letter bgcolor="#58B3FF">가</Letter>
+        <Letter bgcolor="#FF605F">나</Letter>
+        <Letter bgcolor="#FFD52E">다</Letter>
+        <Letter bgcolor="#49DD8E">라</Letter>
+        <Letter bgcolor="#AE99FF">마</Letter>
+      </div >
+    );
+  </script>
+</body>
+
+</html>

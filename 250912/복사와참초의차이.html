@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const a = [1, 2, 3]; // 배열
+        const b = a; // 참조 (같은 배열)
+        const c = a.slice(); // 복사 (새 배열)
+
+        b.push(4); // b에 추가
+        console.log(a); // [1, 2, 3, 4] (b가 변경되면 a도 변경됨)
+        console.log(c); // [1, 2, 3]
+        c.push(5);
+        console.log(a); // [1. 2, 3, 4]
+        console.log(c); // [1, 2, 3, 5]
+    </script>
+</body>
+
+</html>

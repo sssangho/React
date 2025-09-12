@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>React Minimal</title>
+  <!-- React & ReactDOM CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel (JSX 변환용) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- React 코드 (JSX 사용) -->
+  <script type="text/babel">
+    const MyButton = ({ ttt, ccc }) => {
+      return (
+        <div>
+          <button type={ttt}>{ccc}</button>
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      <div>
+        <MyButton ttt="submit" ccc="버튼입니다." />
+        <MyButton ttt="submit" ccc="버튼!" />
+      </div>
+    );
+  </script>
+</body>
+
+</html>
