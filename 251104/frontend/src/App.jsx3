@@ -1,0 +1,19 @@
+import { useState, useEffect } from "react";
+import { fetchHello } from "./api";
+
+function App() {
+  const [message, setMessage] = useState("Loading...");
+
+  useEffect(() => {
+    fetchHello().then(setMessage);
+  }, []);
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>React + Spring Boot Demo 🚀</h1>
+      <p>{message}</p>
+    </div>
+  );
+}
+
+export default App;

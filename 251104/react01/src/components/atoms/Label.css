@@ -1,0 +1,30 @@
+.label {
+  display: block;
+  font-weight: 600;
+  color: #374151; /* 다크그레이 */
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  font-family: "Inter", "Noto Sans KR", sans-serif;
+  letter-spacing: -0.2px;
+}
+
+/* 필수 입력 표시 */
+.label__required {
+  color: #dc2626; /* 빨간색 */
+  margin-left: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* 포커스된 입력과 잘 어울리게 */
+input:focus + .label {
+  color: #4f46e5; /* 보라색 강조 */
+}
+
+/* 반응형 대비 여백 조절 */
+@media (max-width: 480px) {
+  .label {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+}

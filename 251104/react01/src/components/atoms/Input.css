@@ -1,0 +1,48 @@
+.input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1.5px solid #d1d5db;
+  outline: none;
+  font-size: 1rem;
+  font-family: "Inter", "Noto Sans KR", sans-serif;
+  background-color: #ffffff;
+  transition: all 0.25s ease;
+  color: #111827;
+}
+
+/* 🔹 크기별 width 조정 */
+.input--small {
+  width: 160px;
+}
+
+.input--medium {
+  width: 240px; /* 기본 */
+}
+
+.input--large {
+  width: 320px;
+}
+
+/* 포커스 효과 */
+.input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Placeholder 색상 */
+.input::placeholder {
+  color: #9ca3af;
+}
+
+/* Hover 효과 */
+.input:hover {
+  border-color: #a5b4fc;
+}
+
+/* Disabled 상태 */
+.input--disabled {
+  background-color: #f3f4f6;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
